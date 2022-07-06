@@ -189,9 +189,7 @@ class SalpicDataset(utils.Dataset):
         # "val": use hard-coded list above
         # "train": use data from stage1_train minus the hard-coded list above
         # else: use the data from the specified sub-directory
-        assert subset in ["train", "val", "stage1_train", "stage1_test", "stage2_test"]
-        subset_dir = "stage1_train" if subset in ["train", "val"] else subset
-        dataset_dir = os.path.join(dataset_dir, subset_dir)
+        dataset_dir = os.path.join(dataset_dir)
         if subset == "val":
             image_ids = VAL_IMAGE_DIR
         if subset == "train":
