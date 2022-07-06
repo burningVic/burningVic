@@ -192,7 +192,7 @@ class SalpicDataset(utils.Dataset):
         if auto_download is True:
             self.auto_download(dataset_dir, subset, year)
 
-        coco = json.load("{}/annotations/instances_{}{}.json".format(dataset_dir, subset, year))
+        coco = json.load(f"{dataset_dir}/annotations/instances_{subset}{year}.json")
         if subset == "minival" or subset == "valminusminival":
             subset = "val"
         image_dir = "{}/{}{}".format(dataset_dir, subset, year)
