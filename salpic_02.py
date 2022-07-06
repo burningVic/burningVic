@@ -42,7 +42,7 @@ import json
 
 # Root directory of the project
 ROOT_DIR = os.path.abspath("../../")
-DEFAULT_DATASET_YEAR=(2017,2022)
+DEFAULT_DATASET_YEAR=2022
 year=2022
 
 
