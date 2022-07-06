@@ -44,6 +44,8 @@ from imgaug import augmenters as iaa
 ROOT_DIR = os.path.abspath("../../")
 DEFAULT_DATASET_YEAR=(2017,2022)
 year=(2017,2022)
+COCO = os.path.join(ROOT_DIR, "dataset")
+
 
 # Import Mask RCNN
 sys.path.append(ROOT_DIR)  # To find local version of the library
