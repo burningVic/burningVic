@@ -173,7 +173,7 @@ class SalpicInferenceConfig(SalpicConfig):
 
 class SalpicDataset(utils.Dataset):
 
-    def load_salamander_shape(self, dataset_dir, subset):
+    def load_salamander_shape(self, count, height, width):
         """Load a subset of the salpic dataset.
         dataset_dir: Root directory of the dataset
         """
