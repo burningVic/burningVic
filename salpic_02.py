@@ -199,9 +199,9 @@ class SalpicDataset(utils.Dataset):
         image_dir = "{}/{}{}".format(dataset_dir, subset, year)
 
         # Load all classes or a subset?
-        if not class_ids:
+        #if not class_ids:
             # All classes
-            class_ids = sorted(coco.getCatIds())
+            #class_ids = sorted(coco.getCatIds())
 
         # All images or a subset?
         if class_ids:
