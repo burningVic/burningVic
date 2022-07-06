@@ -228,7 +228,7 @@ class SalpicDataset(utils.Dataset):
         salpic = info['salpic']
         count = len(salpic)
         mask = np.zeros([info['height'], info['width'], count], dtype=np.uint8)
-        for i, (shape, _, dims) in enumerate(info['shapes']):
+        for i, (shape, _, dims) in enumerate(info['salpic']):
             mask[:, :, i:i + 1] = self.draw_shape(mask[:, :, i:i + 1].copy(),
                                                   shape, dims, 1)
         # Handle occlusions
