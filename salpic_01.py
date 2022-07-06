@@ -190,9 +190,9 @@ class SalpicDataset(utils.Dataset):
         # list of shapes sizes and locations). This is more compact than
         # actual images. Images are generated on the fly in load_image().
         for i in range(count):
-            bg_color, salpic = self.random_image(height)
+            bg_color, salpic = self.random_image(height, width)
             self.add_image("salpic", image_id=i, path=None,
-                           height=height,
+                           width=width,height=height,
                            bg_color=bg_color, salpic=salpic)
 
     def load_image(self, image_id):
