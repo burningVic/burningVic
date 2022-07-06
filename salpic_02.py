@@ -42,6 +42,8 @@ from imgaug import augmenters as iaa
 
 # Root directory of the project
 ROOT_DIR = os.path.abspath("../../")
+DEFAULT_DATASET_YEAR=(2017,2022)
+year=(2017,2022)
 
 # Import Mask RCNN
 sys.path.append(ROOT_DIR)  # To find local version of the library
@@ -172,9 +174,9 @@ class SalpicInferenceConfig(SalpicConfig):
 
 
 class SalpicDataset(utils.Dataset):
-
+       
     def load_coco(self, dataset_dir, subset, year=DEFAULT_DATASET_YEAR, class_ids=None,
-                  class_map=None, return_coco=False, auto_download=False, DEFAULT_DATASET_YEAR=(2017,2022):
+                  class_map=None, return_coco=False, auto_download=False, DEFAULT_DATASET_YEAR=None:
         """Load a subset of the COCO dataset.
         dataset_dir: The root directory of the COCO dataset.
         subset: What to load (train, val, minival, valminusminival)
