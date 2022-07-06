@@ -245,16 +245,9 @@ class SalpicDataset(utils.Dataset):
         """Draws a shape from the given specs."""
         # Get the center x, y and the size s
         x, y, s = dims
-        if shape == 'square':
+        if shape == 'salamander':
             image = cv2.rectangle(image, (x - s, y - s),
                                   (x + s, y + s), color, -1)
-        elif shape == "circle":
-            image = cv2.circle(image, (x, y), s, color, -1)
-        elif shape == "triangle":
-            points = np.array([[(x, y - s),
-                                (x - s / math.sin(math.radians(60)), y + s),
-                                (x + s / math.sin(math.radians(60)), y + s),
-                                ]], dtype=np.int32)
             image = cv2.fillPoly(image, points, color)
         return image
 
