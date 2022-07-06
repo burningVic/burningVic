@@ -200,7 +200,7 @@ class SalpicDataset(utils.Dataset):
             self.add_image(
                 "salpic",
                 image_id=image_id,
-                path=os.path.join(TRAIN_IMAGE_DIR, f"{*}.jpg".format(image_id)))
+                path=os.path.join(TRAIN_IMAGE_DIR, f"{image_id}.jpg".format(image_id)))
 
     def load_mask(self, image_id):
         """Generate instance masks for an image.
