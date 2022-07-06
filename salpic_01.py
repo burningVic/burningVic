@@ -281,6 +281,8 @@ class SalpicDataset(utils.Dataset):
         specifications that can be used to draw the image.
         """
         # Pick random background color
+        import random 
+        from random import randint
         bg_color = np.array([random.randint(0, 255) for _ in range(3)])
         # Generate a few random shapes and record their
         # bounding boxes
