@@ -215,6 +215,7 @@ class SalpicDataset(utils.Dataset):
             image_ids = list(set(image_ids))
         else:
             # All images
+            imgs = {}
             image_ids = list(coco.imgs.keys())
 
         # Add classes
