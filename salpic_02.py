@@ -176,7 +176,7 @@ class SalpicInferenceConfig(SalpicConfig):
 class SalpicDataset(utils.Dataset):
        
     def load_coco(self, dataset_dir, subset, year=DEFAULT_DATASET_YEAR, class_ids=None,
-                  class_map=None, return_coco=False, auto_download=False, DEFAULT_DATASET_YEAR=None:
+                  class_map=None, return_coco=False, auto_download=False, DEFAULT_DATASET_YEAR=None):
         """Load a subset of the COCO dataset.
         dataset_dir: The root directory of the COCO dataset.
         subset: What to load (train, val, minival, valminusminival)
