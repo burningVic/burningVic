@@ -226,7 +226,7 @@ class SalpicDataset(utils.Dataset):
         """
         info = self.image_info[image_id]
         salpic = info['salpic']
-        count = len(shapes)
+        count = len(salpic)
         mask = np.zeros([info['height'], info['width'], count], dtype=np.uint8)
         for i, (shape, _, dims) in enumerate(info['shapes']):
             mask[:, :, i:i + 1] = self.draw_shape(mask[:, :, i:i + 1].copy(),
@@ -238,7 +238,7 @@ class SalpicDataset(utils.Dataset):
             occlusion = np.logical_and(
                 occlusion, np.logical_not(mask[:, :, i]))
         # Map class names to class IDs.
-        class_ids = np.array([self.class_names.index(s[0]) for s in shapes])
+        class_ids = np.array([self.class_names.index(s[0]) for s in salpic])
         return mask, class_ids.astype(np.int32)
 
     def draw_shape(self, image, shape, dims, color):
