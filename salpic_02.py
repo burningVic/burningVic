@@ -44,7 +44,7 @@ import json
 ROOT_DIR = os.path.abspath("../../")
 DEFAULT_DATASET_YEAR=(2017,2022)
 year=(2017,2022)
-COCO = os.path.join(ROOT_DIR, "dataset")
+
 
 
 # Import Mask RCNN
