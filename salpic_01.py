@@ -194,11 +194,8 @@ class SalpicDataset(utils.Dataset):
         dataset_dir = os.path.join(dataset_dir, subset_dir)
         if subset == "val":
             image_ids = VAL_IMAGE_DIR
-        else:
-            # Get image ids from directory names
-            image_ids = next(os.walk(dataset_dir))[1]
-            if subset == "train":
-                image_ids = list(set(image_ids) - set(VAL_IMAGE_DIR))
+        if subset == "train"
+            image_ids = TRAIN_IMAGE_DIR
 
         # Add images
         for image_id in image_ids:
