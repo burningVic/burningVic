@@ -38,6 +38,8 @@ import datetime
 import numpy as np
 import skimage.io
 from imgaug import augmenters as iaa
+import random
+from random import randint 
 
 
 # Root directory of the project
